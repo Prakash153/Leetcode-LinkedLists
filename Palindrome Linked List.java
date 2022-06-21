@@ -2,7 +2,7 @@
 
 solution: 1. find the middle element. 
           2. reverse the list that is after the middle elemdent.
-          4  check for both halfs now. 
+          3.  check for both halfs now. 
       
       
       code:
