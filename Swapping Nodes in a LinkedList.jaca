@@ -1,0 +1,39 @@
+You are given the head of a linked list, and an integer k.
+
+Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node from the end (the list is 1-indexed).
+
+
+1-2-3->4->5->null
+k = 2; 
+1->4->3->2->5->null
+
+algorithm : 
+1. start slow as head and fast as k-1
+2. fast is the first to be swapped.
+2. move both slow and fast simultaneously till fast become's null 
+4. slow is the second to be swapped. 
+
+code: 
+class Solution {
+    public ListNode swapNodes(ListNode head, int k) {
+        ListNode slow = head ; 
+        ListNode fast = head; 
+        for (int i= 0 ;i<k-1 && fast != null; i++){
+            fast = fast.next;
+        }
+        
+        ListNode first = fast  ; 
+        
+        while(fast.next  != null ){
+            slow = slow.next ;
+            fast = fast.next ; 
+        }
+         ListNode second = slow ; 
+        
+        int temp = first.val ; 
+        first.val = second.val ; 
+        second.val = temp;
+        return head;
+        
+    }
+}
