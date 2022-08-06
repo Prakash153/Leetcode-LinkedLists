@@ -8,7 +8,7 @@ You may not alter the values in the list's nodes, only nodes themselves may be c
   
   Logic : 
 
-1. Add frist megthod : 
+1. Add frist method : 
 this is a method to reverse a linked list. In this method we create a temporary head and temporary tail. 
 now we iterrate the list using current node. 
     step I : store curr.next in forward variable. 
